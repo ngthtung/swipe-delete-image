@@ -1,0 +1,6 @@
+/* Lời nhắc quyền của iOS (tiếng Việt).
+   Các chuỗi này ghi đè giá trị gốc trong Info.plist. */
+
+"NSPhotoLibraryUsageDescription" = "PhotoSwipe cần quyền truy cập thư viện ảnh để bạn duyệt và vuốt qua từng tấm ảnh. Những ảnh bạn vuốt bỏ chỉ được gom vào album chờ xoá — không có gì bị xoá cho đến khi bạn xác nhận.";
+
+"NSPhotoLibraryAddUsageDescription" = "PhotoSwipe tạo một album chờ xoá trong thư viện ảnh và thêm những ảnh bạn vuốt bỏ vào đó, để bạn xem lại trước khi quyết định xoá.";

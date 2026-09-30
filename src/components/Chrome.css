@@ -1,0 +1,141 @@
+.topbar {
+  flex: 0 0 auto;
+  padding: calc(8px + var(--safe-top)) calc(12px + var(--safe-right)) 8px
+    calc(12px + var(--safe-left));
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.topbar-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.topbar-progress-text {
+  font-size: 15px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.2px;
+  white-space: nowrap;
+}
+
+.topbar-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* Chips absorb the overflow (ellipsis) so the gear button keeps its full box.
+   `min-width: 0` is required — a nowrap flex item will not shrink without it. */
+.topbar-actions .chip {
+  max-width: 132px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-btn-sm {
+  width: 34px;
+  height: 34px;
+}
+
+.topbar-bar {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.topbar-bar-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.25s ease;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 159, 10, 0.14);
+  box-shadow: inset 0 0 0 1px rgba(255, 159, 10, 0.32);
+  color: var(--trash);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.banner .btn {
+  margin-left: auto;
+  background: rgba(255, 159, 10, 0.2);
+  color: var(--trash);
+}
+
+/* ------------------------------------------------------------- bottom bar */
+
+.bottombar {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px calc(16px + var(--safe-right)) calc(10px + var(--safe-bottom))
+    calc(16px + var(--safe-left));
+}
+
+.bottombar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.bottombar-actions .icon-btn {
+  width: 52px;
+  height: 52px;
+  background: var(--surface-2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.bottombar-actions .icon-btn:first-child {
+  width: 42px;
+  height: 42px;
+  color: var(--muted);
+}
+
+.action-keep {
+  color: var(--keep);
+}
+.action-trash {
+  color: var(--trash);
+}
+.action-favorite {
+  color: var(--favorite);
+}
+.action-later {
+  color: var(--later);
+}
+
+.review-btn {
+  justify-content: space-between;
+  background: var(--surface-2);
+  box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.review-btn-size {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.bottombar-sync {
+  font-size: 12px;
+  color: var(--muted-2);
+}
+

@@ -1,0 +1,87 @@
+.deck {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 16px 0;
+}
+
+.deck-stack {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  touch-action: none;
+}
+
+.deck-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px 12px;
+  text-align: center;
+}
+
+.deck-state h2 {
+  font-size: 22px;
+}
+
+.deck-state-body {
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.deck-state-count {
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.done-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(48, 209, 88, 0.16);
+  color: var(--keep);
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.progress {
+  width: min(280px, 100%);
+  height: 8px;
+  border-radius: 4px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--accent);
+  transition: width 0.35s ease;
+}
+
+.spinner {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid var(--surface-3);
+  border-top-color: var(--accent);
+  animation: spin 0.85s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

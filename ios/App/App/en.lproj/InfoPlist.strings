@@ -1,0 +1,6 @@
+/* Localized iOS permission prompts (English).
+   These override the base values in Info.plist. */
+
+"NSPhotoLibraryUsageDescription" = "PhotoSwipe needs access to your photo library so you can browse and swipe through your photos. Photos you swipe away are only collected into a review album — nothing is deleted until you explicitly confirm it.";
+
+"NSPhotoLibraryAddUsageDescription" = "PhotoSwipe creates a review album in your photo library and adds the photos you swipe away to it, so you can look them over before deciding to delete anything.";

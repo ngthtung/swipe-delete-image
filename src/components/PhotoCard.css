@@ -1,0 +1,186 @@
+.card-slot {
+  position: absolute;
+  inset: 0;
+  transform-origin: 50% 50%;
+  will-change: transform, opacity;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--surface-2);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.55),
+    0 2px 0 rgba(255, 255, 255, 0.05) inset;
+  touch-action: none;
+  will-change: transform;
+}
+
+.card-media {
+  position: absolute;
+  inset: 0;
+  background: #000;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.card-skeleton {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    var(--surface-2) 20%,
+    var(--surface-3) 45%,
+    var(--surface-2) 70%
+  );
+  background-size: 250% 100%;
+  animation: card-shimmer 1.3s linear infinite;
+}
+
+@keyframes card-shimmer {
+  from {
+    background-position: 130% 0;
+  }
+  to {
+    background-position: -30% 0;
+  }
+}
+
+.card-tint {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.tint-keep {
+  background: var(--keep);
+}
+.tint-trash {
+  background: var(--trash);
+}
+.tint-favorite {
+  background: var(--favorite);
+}
+.tint-later {
+  background: var(--later);
+}
+
+.card-stamp {
+  position: absolute;
+  top: 26px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 3px solid currentColor;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  background: rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+
+.stamp-left {
+  left: 20px;
+  transform: rotate(-12deg);
+}
+
+.stamp-right {
+  right: 20px;
+  transform: rotate(12deg);
+}
+
+.stamp-keep {
+  color: var(--keep);
+}
+
+.stamp-trash {
+  color: var(--trash);
+}
+
+.stamp-favorite {
+  color: var(--favorite);
+  top: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.stamp-later {
+  color: var(--later);
+  top: auto;
+  bottom: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-tags {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  pointer-events: none;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgba(8, 8, 11, 0.62);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tag-favorite {
+  color: var(--favorite);
+}
+
+.tag-trash {
+  color: var(--trash);
+}
+
+.card-meta {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 26px 14px 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.78),
+    rgba(0, 0, 0, 0)
+  );
+  pointer-events: none;
+}
+
+.card-meta-dot {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-meta-dim {
+  margin-left: auto;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}

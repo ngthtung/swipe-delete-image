@@ -1,0 +1,41 @@
+.gate {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px calc(24px + var(--safe-right)) calc(24px + var(--safe-bottom))
+    calc(24px + var(--safe-left));
+  text-align: center;
+}
+
+.gate-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
+  background: var(--surface-2);
+  color: var(--accent);
+}
+
+.gate-title {
+  font-size: 24px;
+}
+
+.gate-body {
+  max-width: 320px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.gate-actions {
+  width: min(320px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}

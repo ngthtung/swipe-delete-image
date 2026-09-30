@@ -1,0 +1,116 @@
+.review-body {
+  gap: 12px;
+}
+
+.review-state {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 48px 12px;
+  text-align: center;
+}
+
+.review-error {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 69, 58, 0.12);
+  color: var(--danger);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.review-cell {
+  position: relative;
+  aspect-ratio: 1;
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+
+.review-cell:active {
+  transform: scale(0.96);
+}
+
+.review-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  -webkit-user-drag: none;
+}
+
+.review-cell-skeleton {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    110deg,
+    var(--surface-2) 20%,
+    var(--surface-3) 45%,
+    var(--surface-2) 70%
+  );
+  background-size: 250% 100%;
+  animation: card-shimmer 1.3s linear infinite;
+}
+
+.review-cell-remove {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(8, 8, 11, 0.72);
+  color: #fff;
+}
+
+.review-cell-tag {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  height: 18px;
+  padding: 0 6px;
+  border-radius: 9px;
+  background: rgba(8, 8, 11, 0.72);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.review-cell-size {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 6px 4px;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.92);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  text-align: left;
+  font-variant-numeric: tabular-nums;
+}
+
+.review-note {
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
